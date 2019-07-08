@@ -9,7 +9,9 @@ using VMUnityLib;
 
 public sealed class UITitle : CmnMonoBehaviour
 {
+#if USE_TWEEN
     uTweenAlpha tweenAlphe;
+#endif
 
     // 処理なし。メッセージ受信エラー避け.
     protected override void FixedUpdate() { }
@@ -22,7 +24,9 @@ public sealed class UITitle : CmnMonoBehaviour
     public override void Start()
     {
         GameServiceUtil.Auth();
+#if USE_TWEEN
         tweenAlphe = GetComponent<uTweenAlpha>();
+#endif
     }
 
     /// <summary>
@@ -30,6 +34,7 @@ public sealed class UITitle : CmnMonoBehaviour
     /// </summary>
     protected override void OnFadeInEnd()
     {
+#if USE_TWEEN
         tweenAlphe.Play(PlayDirection.Forward);
 
         //if (PlayerPrefs.GetInt(ReviewIndictor.REVIEW_FLAG_NAME, 0) == 0)
@@ -48,8 +53,11 @@ public sealed class UITitle : CmnMonoBehaviour
         //    }
         //}
 
+#if USE_NEND
         NendAdController.Inst.ShowBottomBanner(true);
         NendAdController.Inst.ShowTopBanner(true);
+#endif
+#endif
     }
 
     /// <summary>
@@ -57,12 +65,6 @@ public sealed class UITitle : CmnMonoBehaviour
     /// </summary>
     public void StartGame()
     {
-
-
-
-
-
-
     }
 
     /// <summary>

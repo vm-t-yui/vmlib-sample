@@ -40,7 +40,7 @@ public class GameDataManager : Singleton<GameDataManager>
 
         // TODO:正しいものに.
         List<string> skillSlotIdList = new List<string>();
-		UnitData friendUnit = new UnitData(GetKituneArcheTypeDummy(5), 0, 12, 0, UnitKind.PLAYER, skillSlotIdList);
+        UnitData friendUnit = new UnitData(GetKituneArcheTypeDummy(5), 0, 12, 0, UnitKind.PLAYER, skillSlotIdList);
 
         UserPublicData friendPublicData = new UserPublicData(
             "friend",

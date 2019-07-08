@@ -33,20 +33,20 @@ public sealed class GameInitializer : MonoBehaviour
     /// <summary>
     /// Use this for initialization.
     /// </summary>
-	void Start () 
-	{
-		QualitySettings.vSyncCount = 1;
-		Application.targetFrameRate = 60;
+    void Start () 
+    {
+        QualitySettings.vSyncCount = 1;
+        Application.targetFrameRate = 60;
         //Logger.Log("Application.targetFrameRate:" + Application.targetFrameRate + " " + QualitySettings.GetQualityLevel() + " " + QualitySettings.vSyncCount);
 
-		// 画面解像度をLibBridgeInfo.FIXED_SCREEN_Hで固定.
+        // 画面解像度をLibBridgeInfo.FIXED_SCREEN_Hで固定.
         /*
-		float screenRate = (float)LibBridgeInfo.FIXED_SCREEN_H / Screen.height;
-		if( screenRate > 1 ) screenRate = 1;
-		int width = (int)(Screen.width * screenRate);
-		int height = (int)(Screen.height * screenRate);
-		Screen.SetResolution( width , height, true);
+        float screenRate = (float)LibBridgeInfo.FIXED_SCREEN_H / Screen.height;
+        if( screenRate > 1 ) screenRate = 1;
+        int width = (int)(Screen.width * screenRate);
+        int height = (int)(Screen.height * screenRate);
+        Screen.SetResolution( width , height, true);
         */
 
-	}
+    }
 }

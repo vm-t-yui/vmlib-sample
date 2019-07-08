@@ -12,13 +12,13 @@ namespace SWorker
     /// <summary>
     /// デモシーン
     /// </summary>
-	public class SceneDemo : MonoBehaviour
-	{
-		private static readonly string ExtensionImage = ".png";
-//		private static readonly string ExtensionImage = ".jpeg";
+    public class SceneDemo : MonoBehaviour
+    {
+        private static readonly string ExtensionImage = ".png";
+//        private static readonly string ExtensionImage = ".jpeg";
 
-		public Text Result;
-		public RawImage Image;
+        public Text Result;
+        public RawImage Image;
 
         /// <summary>
         /// 開始処理
@@ -26,12 +26,12 @@ namespace SWorker
         void Start()
         {
             // Post画像は端末から読み込むので、ない場合はあらかじめ保存しておくこと
-			string imagePath = Application.persistentDataPath + "/image" + ExtensionImage;
+            string imagePath = Application.persistentDataPath + "/image" + ExtensionImage;
             if (!File.Exists(imagePath)) 
             {
-				Texture2D texture = (Texture2D)Image.texture;
-				byte[] data = (ExtensionImage == ".png") ? texture.EncodeToPNG () : texture.EncodeToJPG ();
-				File.WriteAllBytes(imagePath, data); 
+                Texture2D texture = (Texture2D)Image.texture;
+                byte[] data = (ExtensionImage == ".png") ? texture.EncodeToPNG () : texture.EncodeToJPG ();
+                File.WriteAllBytes(imagePath, data); 
             }
         }
 
@@ -40,12 +40,12 @@ namespace SWorker
         /// </summary>
         public void OnPostTwitter()
         {
-			string message   = "message";
-			string url       = "http://yedo-factory.co.jp/";
-			string imagePath = Application.persistentDataPath + "/image" + ExtensionImage;
-			SocialWorker.PostTwitter(message, url, imagePath, OnResult);
-//			SocialWorker.PostTwitter(message, "", OnResult);
-//			SocialWorker.PostTwitter("", imagePath, OnResult);
+            string message   = "message";
+            string url       = "http://yedo-factory.co.jp/";
+            string imagePath = Application.persistentDataPath + "/image" + ExtensionImage;
+            SocialWorker.PostTwitter(message, url, imagePath, OnResult);
+//            SocialWorker.PostTwitter(message, "", OnResult);
+//            SocialWorker.PostTwitter("", imagePath, OnResult);
         }
 
         /// <summary>
@@ -53,8 +53,8 @@ namespace SWorker
         /// </summary>
         public void OnPostFacebook()
         {
-			string imagePath = Application.persistentDataPath + "/image" + ExtensionImage;
-			SocialWorker.PostFacebook(imagePath, OnResult);
+            string imagePath = Application.persistentDataPath + "/image" + ExtensionImage;
+            SocialWorker.PostFacebook(imagePath, OnResult);
         }
 
         /// <summary>
@@ -62,11 +62,11 @@ namespace SWorker
         /// </summary>
         public void OnPostLine()
         {
-			string message   = "message";
-			string imagePath = Application.persistentDataPath + "/image" + ExtensionImage;
-			SocialWorker.PostLine(message, imagePath, OnResult);
-//			SocialWorker.PostLine(message, "", OnResult);
-//			SocialWorker.PostLine("", imagePath, OnResult);
+            string message   = "message";
+            string imagePath = Application.persistentDataPath + "/image" + ExtensionImage;
+            SocialWorker.PostLine(message, imagePath, OnResult);
+//            SocialWorker.PostLine(message, "", OnResult);
+//            SocialWorker.PostLine("", imagePath, OnResult);
         }
 
         /// <summary>
@@ -74,8 +74,8 @@ namespace SWorker
         /// </summary>
         public void OnPostInstagram()
         {
-			string imagePath = Application.persistentDataPath + "/image" + ExtensionImage;
-			SocialWorker.PostInstagram(imagePath, OnResult);
+            string imagePath = Application.persistentDataPath + "/image" + ExtensionImage;
+            SocialWorker.PostInstagram(imagePath, OnResult);
         }
 
         /// <summary>
@@ -83,15 +83,15 @@ namespace SWorker
         /// </summary>
         public void OnPostMail()
         {
-			string[] to      = new string[] { "to@hoge.com" };
-			string[] cc      = new string[] { "cc@hoge.com" };
-			string[] bcc     = new string[] { "bcc@hoge.com" };
-			string subject   = "subject";
-			string message   = "message";
-			string imagePath = Application.persistentDataPath + "/image" + ExtensionImage;
-			SocialWorker.PostMail(to, cc, bcc, subject, message, imagePath, OnResult);
-//			SocialWorker.PostMail(message, "", OnResult);
-//			SocialWorker.PostMail("", imagePath, OnResult);
+            string[] to      = new string[] { "to@hoge.com" };
+            string[] cc      = new string[] { "cc@hoge.com" };
+            string[] bcc     = new string[] { "bcc@hoge.com" };
+            string subject   = "subject";
+            string message   = "message";
+            string imagePath = Application.persistentDataPath + "/image" + ExtensionImage;
+            SocialWorker.PostMail(to, cc, bcc, subject, message, imagePath, OnResult);
+//            SocialWorker.PostMail(message, "", OnResult);
+//            SocialWorker.PostMail("", imagePath, OnResult);
         }
 
         /// <summary>
@@ -99,11 +99,11 @@ namespace SWorker
         /// </summary>
         public void OnCreateChooser()
         {
-			string message   = "message";
-			string imagePath = Application.persistentDataPath + "/image" + ExtensionImage;
-			SocialWorker.CreateChooser(message, imagePath, OnResult);
-//			SocialWorker.CreateChooser(message, "", OnResult);
-//			SocialWorker.CreateChooser("", imagePath, OnResult);
+            string message   = "message";
+            string imagePath = Application.persistentDataPath + "/image" + ExtensionImage;
+            SocialWorker.CreateChooser(message, imagePath, OnResult);
+//            SocialWorker.CreateChooser(message, "", OnResult);
+//            SocialWorker.CreateChooser("", imagePath, OnResult);
         }
 
         /// <summary>
@@ -114,16 +114,16 @@ namespace SWorker
         {
             switch(res)
             {
-				case SocialWorkerResult.Success:
-					Result.text = "Result : Success";
+                case SocialWorkerResult.Success:
+                    Result.text = "Result : Success";
                     break;
                 case SocialWorkerResult.NotAvailable:
-					Result.text = "Result : NotAvailable";
+                    Result.text = "Result : NotAvailable";
                     break;
                 case SocialWorkerResult.Error:
-					Result.text = "Result : Error";
+                    Result.text = "Result : Error";
                     break;
             }
         }
-	}
+    }
 }

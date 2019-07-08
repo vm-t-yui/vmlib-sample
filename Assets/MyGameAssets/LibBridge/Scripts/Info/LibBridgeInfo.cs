@@ -9,10 +9,10 @@ using VMUnityLib;
 
 public static class LibBridgeInfo
 {
-	public const float FIXED_SCREEN_W = 960.0f;
-	public const int   FIXED_SCREEN_WI = (int)FIXED_SCREEN_W;
-	public const float FIXED_SCREEN_H = 640.0f;
-	public const int   FIXED_SCREEN_HI = (int)FIXED_SCREEN_H;
+    public const float FIXED_SCREEN_W = 960.0f;
+    public const int   FIXED_SCREEN_WI = (int)FIXED_SCREEN_W;
+    public const float FIXED_SCREEN_H = 640.0f;
+    public const int   FIXED_SCREEN_HI = (int)FIXED_SCREEN_H;
 
     // 共用のWait.
     public static readonly WaitForEndOfFrame WaitForEndOfFrame = new WaitForEndOfFrame();

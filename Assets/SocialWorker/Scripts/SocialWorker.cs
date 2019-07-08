@@ -12,7 +12,7 @@ namespace SWorker
     /// SocialWorker
     /// </summary>
     public class SocialWorker : MonoBehaviour
-	{
+    {
         /// <summary>
         /// ネイティブプラグイン定義
         /// </summary>
@@ -88,9 +88,9 @@ namespace SWorker
             if (imagePath == null) { imagePath = ""; }
             SocialWorker.onResult = onResult;
 #if UNITY_IPHONE
-			postTwitterOrFacebook(false, "", "", imagePath);
+            postTwitterOrFacebook(false, "", "", imagePath);
 #elif UNITY_ANDROID
-			worker.Call("postTwitterOrFacebook", false, "", "", imagePath);
+            worker.Call("postTwitterOrFacebook", false, "", "", imagePath);
 #endif
         }
 
@@ -104,16 +104,16 @@ namespace SWorker
         {
             if (message == null) { message = ""; }
             if (imagePath == null) { imagePath = ""; }
-			SocialWorker.onResult = onResult;
+            SocialWorker.onResult = onResult;
 #if UNITY_IPHONE
-			postLine(message, imagePath);
+            postLine(message, imagePath);
 #elif UNITY_ANDROID
-			worker.Call("postLine", message, imagePath);
+            worker.Call("postLine", message, imagePath);
 #endif
         }
 
         /// <summary>
-		/// Instagram投稿。Instagramは画像の投稿のみ行える。
+        /// Instagram投稿。Instagramは画像の投稿のみ行える。
         /// </summary>
         /// <param name="imagePath">画像パス(PNG/JPGのみ)</param>
         /// <param name="onResult">結果コールバック</param>
@@ -195,7 +195,7 @@ namespace SWorker
                 onResult = null;
             }
         }
-	}
+    }
 
     /// <summary>
     /// 結果値
