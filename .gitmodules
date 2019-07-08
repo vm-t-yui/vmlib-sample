@@ -1,0 +1,4 @@
+[submodule "Assets/MyGameAssets/Lib"]
+	path = Assets/MyGameAssets/Lib
+	url = https://github.com/vm-t-yui/vm-unity-lib.git
+	branch = master
