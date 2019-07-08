@@ -1,0 +1,3 @@
+[submodule "Assets/MyGameAssets/vm-unity-lib"]
+	path = Assets/MyGameAssets/vm-unity-lib
+	url = https://github.com/vm-t-yui/vm-unity-lib.git
