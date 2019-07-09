@@ -496,10 +496,17 @@ PlayerSettings:
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
   scriptingDefineSymbols:
-    1: CROSS_PLATFORM_INPUT
-    4: CROSS_PLATFORM_INPUT;MOBILE_INPUT;NO_GPGS
-    7: CROSS_PLATFORM_INPUT;MOBILE_INPUT
+    1: CROSS_PLATFORM_INPUT;USE_TWEEN;USE_POOL_MANAGER;TextMeshPro
+    4: CROSS_PLATFORM_INPUT;MOBILE_INPUT;NO_GPGS;TextMeshPro
+    7: CROSS_PLATFORM_INPUT;MOBILE_INPUT;TextMeshPro
+    13: TextMeshPro
     14: CROSS_PLATFORM_INPUT;MOBILE_INPUT
+    19: TextMeshPro
+    21: TextMeshPro
+    25: TextMeshPro
+    26: TextMeshPro
+    27: TextMeshPro
+    28: TextMeshPro
   platformArchitecture: {}
   scriptingBackend: {}
   il2cppCompilerConfiguration: {}
