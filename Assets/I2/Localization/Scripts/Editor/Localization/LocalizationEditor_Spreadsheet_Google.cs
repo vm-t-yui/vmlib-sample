@@ -302,7 +302,7 @@ namespace I2.Loc
 		}
 
 
-        private void OnGUI_ImportButtons()
+        void OnGUI_ImportButtons()
         {
             eSpreadsheetUpdateMode Mode = SynchronizationButtons("Import");
             if (Mode != eSpreadsheetUpdateMode.None || InTestAction(eTest_ActionType.Button_GoogleSpreadsheet_Import))
@@ -317,7 +317,7 @@ namespace I2.Loc
             }
         }
 
-        private void OnGUI_ExportButtons()
+        void OnGUI_ExportButtons()
         {
             eSpreadsheetUpdateMode Mode = SynchronizationButtons("Export");
             if (Mode != eSpreadsheetUpdateMode.None || InTestAction(eTest_ActionType.Button_GoogleSpreadsheet_Export))

@@ -23,7 +23,7 @@ namespace I2.Loc
         static CoroutineManager mInstance;
 
 
-        private void Awake()
+        void Awake()
         {
             if (Application.isPlaying)
                 DontDestroyOnLoad(gameObject);

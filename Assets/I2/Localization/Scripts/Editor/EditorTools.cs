@@ -526,7 +526,7 @@ namespace I2.Loc
         #endregion
 
         #region Angle Drawer
-        private static Vector2 mAngle_lastMousePosition;
+        static Vector2 mAngle_lastMousePosition;
 		static Texture mAngle_TextureCircle;
 		static Texture pAngle_TextureCircle { 
 			get{ 

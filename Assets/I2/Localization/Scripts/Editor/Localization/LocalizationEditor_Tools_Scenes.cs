@@ -113,7 +113,7 @@ namespace I2.Loc
 		}
 
  
-        private void OnGUI_ScenesList_SelectAllScenes(bool reset)
+        void OnGUI_ScenesList_SelectAllScenes(bool reset)
         {
             if (reset || mScenesInBuildSettings == null)
             {

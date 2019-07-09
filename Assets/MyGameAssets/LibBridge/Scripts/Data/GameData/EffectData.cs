@@ -11,8 +11,8 @@ using VMUnityLib;
 public sealed class EffectData : BaseData
 {
     // プレハブ.
-    public GameObject   Prefab  { get { return prefab;      } private set { prefab = value; } }
+    public GameObject   Prefab  { get { return prefab;      } set { prefab = value; } }
 
     [SerializeField]
-    private GameObject prefab;
+    GameObject prefab;
 }

@@ -582,7 +582,7 @@ namespace I2.Loc
 			}
 		}
 
-        private static void TranslateTerm(string Key, TermData termdata, LanguageSourceData source, int i)
+        static void TranslateTerm(string Key, TermData termdata, LanguageSourceData source, int i)
         {
             string sourceText = null;
             string sourceLangCode = null;

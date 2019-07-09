@@ -99,7 +99,7 @@ namespace I2.Loc
             mSource.Awake();
         }
 
-        private void OnDestroy()
+        void OnDestroy()
         {
             NeverDestroy = false;
 

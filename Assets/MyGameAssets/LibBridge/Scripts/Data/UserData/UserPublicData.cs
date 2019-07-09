@@ -7,8 +7,8 @@ using System.Collections;
 
 public sealed class UserPublicData
 {
-    public string   Uiid        { get; private set; }   // UIID.
-    public string   Name        { get; private set; }   // 名前.
+    public string   Uiid        { get; set; }   // UIID.
+    public string   Name        { get; set; }   // 名前.
     // 最終ログイン日.
     // レベル.
     // ひとこと.

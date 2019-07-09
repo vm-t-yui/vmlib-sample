@@ -8,11 +8,11 @@ namespace I2.Loc
 	public partial class LocalizationEditor
 	{
 		#region Variables
-		private List<string> mTranslationTerms = new List<string>();
-		private Dictionary<string, TranslationQuery> mTranslationRequests = new Dictionary<string, TranslationQuery> ();
-        private bool mAppNameTerm_Expanded;
+		List<string> mTranslationTerms = new List<string>();
+		Dictionary<string, TranslationQuery> mTranslationRequests = new Dictionary<string, TranslationQuery> ();
+        bool mAppNameTerm_Expanded;
 
-        private List<string> mLanguageCodePopupList = null;
+        List<string> mLanguageCodePopupList = null;
 
 		#endregion
 

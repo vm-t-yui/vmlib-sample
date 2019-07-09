@@ -6,7 +6,7 @@ using VMUnityLib;
 
 public class CommonGameData : SingletonMonoBehaviour<CommonGameData>
 {
-    private bool isReward;
+    bool isReward;
 
 
     /// <summary>

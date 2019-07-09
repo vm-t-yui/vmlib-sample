@@ -225,13 +225,13 @@ namespace I2.Loc
     internal class ArabicTable
     {
 
-        private static List<ArabicMapping> mapList;
-        private static ArabicTable arabicMapper;
+        static List<ArabicMapping> mapList;
+        static ArabicTable arabicMapper;
 
         /// <summary>
         /// Setting up the conversion table
         /// </summary>
-        private ArabicTable()
+        ArabicTable()
         {
             mapList = new List<ArabicMapping>();
 

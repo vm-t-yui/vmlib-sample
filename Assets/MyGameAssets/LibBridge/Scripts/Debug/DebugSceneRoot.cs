@@ -14,7 +14,7 @@ public sealed class DebugSceneRoot : CmnMonoBehaviour
     public    override void Start()             { }
     protected override void FixedUpdate()       { }
 
-    private bool bVisible = false;
+    bool bVisible = false;
 
     /// <summary>
     /// シーン切り替え初期化.

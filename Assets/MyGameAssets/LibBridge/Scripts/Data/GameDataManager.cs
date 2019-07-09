@@ -9,9 +9,9 @@ using System.Collections.Generic;
 
 public class GameDataManager : Singleton<GameDataManager>
 {
-    public UserData          UserData         { get; private set; }
-    public IdentifiedDataManager<EffectData> EffectDataManager { get; private set; }
-    public IdentifiedDataManager<VoiceData> VoiceDataManager { get; private set; }
+    public UserData          UserData         { get; set; }
+    public IdentifiedDataManager<EffectData> EffectDataManager { get; set; }
+    public IdentifiedDataManager<VoiceData> VoiceDataManager { get; set; }
 
     public GameDataManager()
     {
@@ -56,7 +56,7 @@ public class GameDataManager : Singleton<GameDataManager>
     /// ダミーデータ作成.
     /// </summary>
     /// <returns></returns>
-    private UserData GetDummyData()
+    UserData GetDummyData()
     {
         UserData ret = new UserData(new UserPublicData("test", "test user"));
         return ret;

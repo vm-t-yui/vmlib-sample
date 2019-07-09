@@ -7,11 +7,11 @@ namespace I2.Loc
     [CustomEditor(typeof(LocalizationParamsManager))]
 	public class LocalizationParamsManagerInspector : Editor
 	{
-		private ReorderableList mList;
-        private SerializedProperty mProp_IsGlobalManager;
+		ReorderableList mList;
+        SerializedProperty mProp_IsGlobalManager;
 
 
-        private ReorderableList getList(SerializedObject serObject)
+        ReorderableList getList(SerializedObject serObject)
 		{
 			if (mList == null) {
                 mList = new ReorderableList (serObject, serObject.FindProperty ("_Params"), true, true, true, true);
@@ -27,7 +27,7 @@ namespace I2.Loc
 			return mList;
 		}
 
-        private void addElementCallback( ReorderableList list )
+        void addElementCallback( ReorderableList list )
         {
             serializedObject.ApplyModifiedProperties();
             var objParams = (target as LocalizationParamsManager);
@@ -36,7 +36,7 @@ namespace I2.Loc
             serializedObject.Update();
         }
 
-        private void removeElementCallback( ReorderableList list )
+        void removeElementCallback( ReorderableList list )
         {
             if (list.index < 0)
                 return;
@@ -46,12 +46,12 @@ namespace I2.Loc
             serializedObject.Update();
         }
 
-		private void drawHeaderCallback(Rect rect)
+		void drawHeaderCallback(Rect rect)
 		{
             GUI.Label(rect, "Parameters:");
 		}
 
-		private void drawElementCallback(Rect rect, int index, bool isActive, bool isFocused)
+		void drawElementCallback(Rect rect, int index, bool isActive, bool isFocused)
 		{
 			var serializedElement = mList.serializedProperty.GetArrayElementAtIndex (index);
 			var content = new GUIContent ();

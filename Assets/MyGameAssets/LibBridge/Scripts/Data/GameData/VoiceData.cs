@@ -8,9 +8,9 @@ using VMUnityLib;
 [CreateAssetMenu(menuName = "Data/VoiceData")]
 public sealed class VoiceData : BaseData
 {
-    public string    TermName { get { return termName; } private set { termName = value; } }
-    public float     Time  { get { return time; } private set { time = value; } }
+    public string    TermName { get { return termName; } set { termName = value; } }
+    public float     Time  { get { return time; } set { time = value; } }
     
-    [SerializeField] private string    termName;
-    [SerializeField] private float     time;
+    [SerializeField] string    termName;
+    [SerializeField] float     time;
 }

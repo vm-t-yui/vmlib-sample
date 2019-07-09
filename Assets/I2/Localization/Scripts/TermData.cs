@@ -40,7 +40,7 @@ namespace I2.Loc
         public string[]         Languages = new string[0];
         public byte[]			Flags 			= new byte[0];  // flags for each translation
 
-        [SerializeField] private string[] Languages_Touch = null;      // TO BE REMOVED IN A FUTURE RELEASE
+        [SerializeField] string[] Languages_Touch = null;      // TO BE REMOVED IN A FUTURE RELEASE
 
         public string GetTranslation ( int idx, string specialization=null, bool editMode=false )
 		{
@@ -141,6 +141,6 @@ namespace I2.Loc
             this.Filter = filter;
         }
 
-        public string Filter { get; private set; }
+        public string Filter { get; set; }
     }
 }

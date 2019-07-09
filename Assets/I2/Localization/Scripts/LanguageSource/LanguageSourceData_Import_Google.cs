@@ -8,7 +8,7 @@ namespace I2.Loc
 {
 	public partial class LanguageSourceData
 	{
-        private string mDelayedGoogleData;  // Data that was downloaded and is waiting for a levelLoaded event to apply the localization without a lag in performance
+        string mDelayedGoogleData;  // Data that was downloaded and is waiting for a levelLoaded event to apply the localization without a lag in performance
 		#region Connection to Web Service 
 
 		public static void FreeUnusedLanguages()

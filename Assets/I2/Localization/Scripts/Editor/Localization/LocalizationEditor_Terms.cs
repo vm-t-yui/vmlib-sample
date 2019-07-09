@@ -601,7 +601,7 @@ namespace I2.Loc
 			return ShouldShowTerm (termData.Term, termData.Category, termData.Usage, termData);
 		}
 
-		private static TermData ShowTerm_termData;
+		static TermData ShowTerm_termData;
 		public static bool ShouldShowTerm (string Term, string Category, int nUses, ParsedTerm parsedTerm=null )
 		{
             if (!string.IsNullOrEmpty(Category) && !mSelectedCategories.Contains(Category))

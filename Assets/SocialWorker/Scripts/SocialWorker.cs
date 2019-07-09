@@ -18,23 +18,23 @@ namespace SWorker
         /// </summary>
 #if UNITY_IPHONE
         [DllImport("__Internal")]
-        private static extern void postMail(string to, string cc, string bcc, string subject, string message, string imagePath);
+        static extern void postMail(string to, string cc, string bcc, string subject, string message, string imagePath);
         [DllImport("__Internal")]
-        private static extern void postTwitterOrFacebook(bool isTwitter, string message, string url, string imagePath);
+        static extern void postTwitterOrFacebook(bool isTwitter, string message, string url, string imagePath);
         [DllImport("__Internal")]
-        private static extern void postLine(string message, string imagePath);
+        static extern void postLine(string message, string imagePath);
         [DllImport("__Internal")]
-        private static extern void postInstagram(string imagePath);
+        static extern void postInstagram(string imagePath);
         [DllImport("__Internal")]
-        private static extern void createChooser(string message, string imagePath);
+        static extern void createChooser(string message, string imagePath);
 #elif UNITY_ANDROID
-        private static AndroidJavaObject worker = null;
+        static AndroidJavaObject worker = null;
 #endif
 
         /// <summary>
         /// 結果コールバック
         /// </summary>
-        private static Action<SocialWorkerResult> onResult = null;
+        static Action<SocialWorkerResult> onResult = null;
 
         /// <summary>
         /// 初期化処理

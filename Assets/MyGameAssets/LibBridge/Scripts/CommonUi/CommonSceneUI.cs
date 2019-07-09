@@ -19,19 +19,19 @@ public sealed class CommonSceneUI : SingletonMonoBehaviour<CommonSceneUI>
     }
 
     [SerializeField]
-    private UIPlayerStatusBar playerStatusBar;
+    UIPlayerStatusBar playerStatusBar = default;
 
     [SerializeField]
-    private UISceneBG sceneBG;
+    UISceneBG sceneBG = default;
 
     [SerializeField]
-    private UINavigationBar navigationBar;
+    UINavigationBar navigationBar = default;
 
     [SerializeField]
-    private UISceneTitle sceneTitle;
+    UISceneTitle sceneTitle = default;
 
     [SerializeField]
-    private UISceneBackButton sceneBackButton;
+    UISceneBackButton sceneBackButton = default;
 
     /// <summary>
     /// 共通シーンUIの切り替え.

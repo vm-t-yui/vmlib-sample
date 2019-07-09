@@ -14,8 +14,8 @@ namespace SWorker
     /// </summary>
     public class SceneDemo : MonoBehaviour
     {
-        private static readonly string ExtensionImage = ".png";
-//        private static readonly string ExtensionImage = ".jpeg";
+        static readonly string ExtensionImage = ".png";
+//        static readonly string ExtensionImage = ".jpeg";
 
         public Text Result;
         public RawImage Image;
