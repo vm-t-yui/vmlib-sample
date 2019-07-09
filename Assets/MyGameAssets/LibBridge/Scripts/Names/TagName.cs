@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 /// <summary>
 /// タグ名を定数で管理するクラス
 /// </summary>

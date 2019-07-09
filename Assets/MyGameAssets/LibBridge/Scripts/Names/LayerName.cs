@@ -1,4 +1,4 @@
-﻿/// <summary>
+/// <summary>
 /// レイヤー名を定数で管理するクラス
 /// </summary>
 public static class LayerName
